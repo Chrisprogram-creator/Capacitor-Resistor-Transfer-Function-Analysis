@@ -131,3 +131,26 @@ Al accionar el interruptor, el osciloscopio muestra la curva de carga caracterí
   <br>
   <p><i>Respuesta temporal medida en Proteus, validando el modelo de primer orden.</i></p>
 </div>
+
+## 6. ¡Ponte a prueba! 🚀
+
+Para fortalecer el dominio sobre los sistemas de primer orden, se propone realizar el análisis completo de los siguientes dos casos de estudio. El objetivo es comparar los resultados obtenidos mediante el modelo matemático en **MATLAB**, la simulación de hardware en **Proteus** y la **implementación física** en laboratorio.
+
+### Casos de Estudio
+
+| Caso | Resistencia (R) | Capacitor (C) | Objetivo de Análisis |
+| :--- | :--- | :--- | :--- |
+| **A** | $10\,k\Omega$ | $470\,\mu F$ | Observar el efecto de aumentar la capacitancia en el tiempo de establecimiento. |
+| **B** | $1\,k\Omega$ | $470\,\mu F$ | Analizar cómo la reducción de la resistencia acelera la respuesta del sistema. |
+
+### Actividades a realizar:
+1. **Análisis en MATLAB:** Modificar el script proporcionado en este repositorio con los nuevos valores de $R$ y $C$ para obtener las gráficas de respuesta al escalón y el mapa de polos y ceros.
+2. **Simulación en Proteus:** Ajustar los valores de los componentes en el esquemático y utilizar el osciloscopio digital para medir el tiempo en que el capacitor alcanza el 63.2% de su carga ($\tau$).
+3. **Implementación Física:** Armar el circuito en una protoboard y utilizar un osciloscopio real para cronometrar el tiempo de establecimiento ($5\tau$).
+
+### Preguntas de Reflexión
+* ¿Cómo cambió la ubicación del polo en el plano $s$ al disminuir la resistencia en el Caso B?
+* ¿Hubo diferencias significativas entre el tiempo de establecimiento teórico y el medido físicamente? ¿A qué crees que se deba (tolerancia de componentes, resistencia de cables, etc.)?
+
+---
+**Guía:** Documenta tus hallazgos y comparalos con las gráficas de este repositorio para validar tus resultados.
