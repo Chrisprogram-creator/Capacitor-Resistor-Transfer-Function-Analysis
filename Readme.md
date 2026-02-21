@@ -4,7 +4,7 @@ Este repositorio contiene un script de MATLAB diseñado para modelar, simular y 
 
 <div align="center">
   <h4>Captura del Osciloscopio Digital</h4>
-  <img src="CircuitoRC.png" width="400">
+  <img src="CircuitoRC.png" width="200">
   <br>
   <p><i>Respuesta temporal medida en Proteus, validando el modelo de primer orden.</i></p>
 </div>
