@@ -153,12 +153,13 @@ Para fortalecer el dominio sobre los sistemas de primer orden, se propone realiz
 * ¿Cómo cambió la ubicación del polo en el plano $s$ al disminuir la resistencia en el Caso B?
 * ¿Hubo diferencias significativas entre el tiempo de establecimiento teórico y el medido físicamente? ¿A qué crees que se deba (tolerancia de componentes, resistencia de cables, etc.)?
 
-### Actividad realizada: 
+### ACTIVIDAD REALIZADA: 
 1. **Análisis en MATLAB:**
 <img width="1022" height="603" alt="image" src="https://github.com/user-attachments/assets/7be03e03-aede-4def-a93e-a6064db0d46e" />
 <img width="1026" height="605" alt="image" src="https://github.com/user-attachments/assets/ec1eb675-091c-489a-af16-49c542dcf042" />
 
-2. **CÓDIGO en MATLAB:**
+### **CÓDIGO en MATLAB:**
+*
 clc
 clear all
 close all
@@ -202,10 +203,12 @@ plot(t, y, 'LineWidth', 2.5);
 grid on;
 title('Respuesta al Escalón');
 
-**Simulación en Proteus:**
+
+### **Simulación en Proteus:**
+
 <img width="717" height="697" alt="image" src="https://github.com/user-attachments/assets/61780bb6-ab5c-41e6-886c-181f5b63ec2e" />
 <img width="783" height="661" alt="image" src="https://github.com/user-attachments/assets/491f4eb4-d9c7-44f5-9fc5-eddcc23ad0c8" />
-
+*
 ### Preguntas de análisis
 * ¿Cómo cambió la ubicación del polo en el plano $s$ al disminuir la resistencia en el Caso B?
 Al disminuir la resistencia de 10 kΩ a 1 kΩ: El valor de RC disminuye.
@@ -221,6 +224,6 @@ Resistencia interna de cables
 Resistencia interna de la fuente
 Error de medición del osciloscopio
 ESR (resistencia serie interna del capacitor)
-* 
+
 ---
 **Guía:** Compara tus gráficas con las de este repositorio para validar los resultados.
