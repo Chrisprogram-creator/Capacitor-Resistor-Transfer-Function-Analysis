@@ -208,7 +208,8 @@ title('Respuesta al Escalón');
 
 <img width="717" height="697" alt="image" src="https://github.com/user-attachments/assets/61780bb6-ab5c-41e6-886c-181f5b63ec2e" />
 <img width="783" height="661" alt="image" src="https://github.com/user-attachments/assets/491f4eb4-d9c7-44f5-9fc5-eddcc23ad0c8" />
-*
+
+
 ### Preguntas de análisis
 * ¿Cómo cambió la ubicación del polo en el plano $s$ al disminuir la resistencia en el Caso B?
 Al disminuir la resistencia de 10 kΩ a 1 kΩ: El valor de RC disminuye.
