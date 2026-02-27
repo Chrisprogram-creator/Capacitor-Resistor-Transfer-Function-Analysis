@@ -153,5 +153,74 @@ Para fortalecer el dominio sobre los sistemas de primer orden, se propone realiz
 * ¿Cómo cambió la ubicación del polo en el plano $s$ al disminuir la resistencia en el Caso B?
 * ¿Hubo diferencias significativas entre el tiempo de establecimiento teórico y el medido físicamente? ¿A qué crees que se deba (tolerancia de componentes, resistencia de cables, etc.)?
 
+### Actividad realizada: 
+1. **Análisis en MATLAB:**
+<img width="1022" height="603" alt="image" src="https://github.com/user-attachments/assets/7be03e03-aede-4def-a93e-a6064db0d46e" />
+<img width="1026" height="605" alt="image" src="https://github.com/user-attachments/assets/ec1eb675-091c-489a-af16-49c542dcf042" />
+
+2. **CÓDIGO en MATLAB:**
+clc
+clear all
+close all
+
+%Define un vector tiempo (opcional para este caso)
+t = 0:0.01:40;
+%Definir parametros de resistencia y capacitor
+R = 10000;
+C = 0.000470;
+% Definir el sistema para su FT
+num = [1]; 
+den = [R*C 1]; 
+H = tf(num, den);
+
+%Obtenemos los polos y ceros
+p = pole(H);
+z = zero(H);
+
+%Mostrar la FT y los valores de los polos y ceros
+disp('Función de transferencia H');
+printsys(num,den);
+disp('Los polos del sistema están en:');
+disp(p);
+disp('Los ceros del sistema están en:');
+disp(z);
+
+% Gráfica de Polos y Ceros
+pzmap(H); 
+% Encuentra los polos y ceros por su 'tag' y cambia el tamaño
+l_pole = findall(gca, 'Tag', 'PZ_Pole');
+l_zero = findall(gca, 'Tag', 'PZ_Zero');
+set(l_pole, 'MarkerSize', 15, 'LineWidth', 2); % Polos más grandes y gruesos
+set(l_zero, 'MarkerSize', 15, 'LineWidth', 2); % Ceros más grandes y gruesos
+grid on;
+title('Mapa de Polos y Ceros (1er Orden RC)');
+
+figure;
+% Datos de salida (y) y tiempo (t) de la función de transferencia H
+[y, t] = step(t,5*H); 
+plot(t, y, 'LineWidth', 2.5);
+grid on;
+title('Respuesta al Escalón');
+
+**Simulación en Proteus:**
+<img width="717" height="697" alt="image" src="https://github.com/user-attachments/assets/61780bb6-ab5c-41e6-886c-181f5b63ec2e" />
+<img width="783" height="661" alt="image" src="https://github.com/user-attachments/assets/491f4eb4-d9c7-44f5-9fc5-eddcc23ad0c8" />
+
+### Preguntas de análisis
+* ¿Cómo cambió la ubicación del polo en el plano $s$ al disminuir la resistencia en el Caso B?
+Al disminuir la resistencia de 10 kΩ a 1 kΩ: El valor de RC disminuye.
+El polo pasa de −0.2127 a −2.1277. Se mueve más hacia la izquierda en el plano s.
+El sistema se vuelve más rápido y más estable dinámicamente, ya que el polo está más alejado del eje imaginario.
+
+* ¿Hubo diferencias significativas entre el tiempo de establecimiento teórico y el medido físicamente? ¿A qué crees que se deba (tolerancia de componentes, resistencia de cables, etc.)?
+Sí, normalmente hay pequeñas diferencias.
+Se deben a:
+Tolerancia del capacitor (puede variar ±10% o ±20%)
+Tolerancia de la resistencia
+Resistencia interna de cables
+Resistencia interna de la fuente
+Error de medición del osciloscopio
+ESR (resistencia serie interna del capacitor)
+* 
 ---
 **Guía:** Compara tus gráficas con las de este repositorio para validar los resultados.
